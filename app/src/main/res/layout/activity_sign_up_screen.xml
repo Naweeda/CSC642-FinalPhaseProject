@@ -1,0 +1,103 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="17dp"
+    android:paddingLeft="19dp"
+    android:paddingRight="19dp"
+    android:paddingTop="17dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="45dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:drawablePadding="13dp"
+        android:maxLines="1"
+        android:ems="10"
+        android:hint="Name"
+        android:textColorHint="#ffffff"
+        android:drawableLeft="@drawable/ic_name"
+        android:inputType="textPersonName" />
+
+
+    <EditText
+        android:id="@+id/LastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingBottom="9dp"
+        android:paddingTop="9dp"
+        android:drawablePadding="13dp"
+        android:maxLines="4"
+        android:ems="10"
+        android:hint="Last Name"
+        android:textColorHint="#ffffff"
+        android:drawableLeft="@drawable/ic_name"
+        android:inputType="textPersonName" />
+
+
+
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="12dp"
+        android:maxLines="1"
+        android:ems="10"
+        android:hint="Email"
+        android:textColorHint="#ffffff"
+        android:drawableLeft="@drawable/ic_emailicon"
+        android:inputType="textEmailAddress" />
+
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingBottom="9dp"
+        android:paddingTop="9dp"
+        android:drawablePadding="13dp"
+        android:maxLines="4"
+        android:ems="10"
+        android:hint="Password"
+        android:textColorHint="#ffffff"
+        android:drawableLeft="@drawable/ic_password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:text="Submit"
+        android:textColor="#33cccc"
+        android:textStyle="bold"
+        android:backgroundTint="@color/button_backgroundcolor"/>
+
+
+
+</LinearLayout>
