@@ -30,10 +30,10 @@ public class Dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         //setting up the date
-        TextView textView=findViewById(R.id.date);
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd");
-        String currentDate = sdf.format(new Date());
-        textView.setText(currentDate);
+        TextView view=findViewById(R.id.date);
+        SimpleDateFormat date = new SimpleDateFormat("yyyy.MM.dd");
+        String currentDate = date.format(new Date());
+        view.setText(currentDate);
 
         //Assign variable
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -65,23 +65,27 @@ public class Dashboard extends AppCompatActivity {
     }
 
 
+    //Navigation to view expense screen
     public void ClickViewExpense(View v) {
         // Redirect activity
         redirectActivity(this,ViewExpenses.class);
     }
 
 
+    //Navigation to view home screen
     public void ClickHome(View v){
         //Redirct activity
         redirectActivity(this,HomeScreen.class);
     }
 
+    //Navigation to dashboard screen
     public void ClickDashboard(View v) {
         //Redirect activity to dashboard
         redirectActivity(this,Profile.class);
     }
 
 
+    //Navigation to logout
     public void ClickLogout(View v) {
         //close app
         logout(this);
@@ -89,7 +93,7 @@ public class Dashboard extends AppCompatActivity {
 
     public static void logout(Activity activity) {
 
-        //alert dialog
+        //alert the dialog for user's choice
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         //set title
         builder.setTitle("Logout");
@@ -97,7 +101,7 @@ public class Dashboard extends AppCompatActivity {
         //set message
         builder.setMessage("Are you sure you want to logout ?");
 
-        //Positive yes button
+        //If the user say yes just exit
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -106,7 +110,7 @@ public class Dashboard extends AppCompatActivity {
                 System.exit(0);
             }
         });
-        //Negative no button
+        //If the user say no
         builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

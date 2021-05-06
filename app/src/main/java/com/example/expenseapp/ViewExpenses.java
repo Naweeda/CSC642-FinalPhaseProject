@@ -1,6 +1,8 @@
 package com.example.expenseapp;
 
+import android.app.slice.Slice;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import java.util.ArrayList;
@@ -10,6 +12,7 @@ import lecho.lib.hellocharts.model.PieChartData;
 import lecho.lib.hellocharts.model.SliceValue;
 import lecho.lib.hellocharts.view.PieChartView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -29,25 +32,29 @@ public class ViewExpenses extends AppCompatActivity {
 
         //Assign variable
         drawerLayout = findViewById(R.id.drawer_layout);
-        PieChartView pieChartView = findViewById(R.id.chart);
+        PieChartView pieChart = findViewById(R.id.chart);
 
-        pieChartView = findViewById(R.id.chart);
+        pieChart = findViewById(R.id.chart);
 
         //initialize the data for displaying the Android pie chart.
         List pieData = new ArrayList<>();
-
         // Adding the data inside the pieData
-        pieData.add(new SliceValue(15, Color.BLUE).setLabel("Gas"));
-        pieData.add(new SliceValue(25, Color.YELLOW).setLabel("Food"));
-        pieData.add(new SliceValue(10, Color.RED).setLabel("Cloting"));
-        pieData.add(new SliceValue(60, Color.GREEN).setLabel("Bills"));
+        pieData.add(new SliceValue(20, Color.BLUE).setLabel("Shopping 20%"));
+        pieData.add(new SliceValue(20, Color.YELLOW).setLabel("Food 10%"));
+        pieData.add(new SliceValue(10, Color.RED).setLabel("Gas 10 %"));
+        pieData.add(new SliceValue(50, Color.GREEN).setLabel("Bills 50%"));
 
 
         // passing the data inside the model
-        PieChartData pieChartData = new PieChartData(pieData);
-        pieChartData.setHasLabels(true).setValueLabelTextSize(14);
-        pieChartData.setHasCenterCircle(true).setCenterText1("Expense Chart").setCenterText1FontSize(20).setCenterText1Color(Color.parseColor("#0097A7"));
-        pieChartView.setPieChartData(pieChartData);
+        PieChartData data= new PieChartData(pieData);
+
+        //Setting the size of the string
+        data.setHasLabels(true).setValueLabelTextSize(14);
+
+        //Setting the size/color of the string inside the char
+        data.setHasCenterCircle(true).setCenterText1("Expense Chart").setCenterText1FontSize(20).setCenterText1Color(Color.parseColor("#0097A7"));
+        pieChart.setPieChartData(data);
+
     }
 
     public void ClickMenu(View v){

@@ -1,53 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".ViewExpenses">
 
+    <!--    Display the pie chart  -->
     <lecho.lib.hellocharts.view.PieChartView
         android:id="@+id/chart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="80dp"/>
+        android:layout_marginTop="15dp" />
 
+<!--    Navigation Drawer Menu Display -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <!--  calling the main toolbar inside this file for displaying the navigation drawer-->
+    <include layout="@layout/main_toolbar" />
     </LinearLayout>
-<!--<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android="@+id/drawer_layout"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    tools:context=".ViewExpenses">-->
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:orientation="vertical">-->
+    <!--  Navigation Drawer Menu Display -->
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white">
 
 
-<!--        <include layout="@layout/main_toolbar" />-->
+        <!--   calling the main toolbar inside this file for displaying the navigation drawer-->
+        <include layout="@layout/main_nav_drawer"/>
 
-<!--        <TextView-->
-<!--            android:id="@+id/profileScreen"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Expense Report"-->
-<!--            android:textSize="50sp"-->
-<!--            android:textStyle="bold"-->
-<!--            android:gravity="center"/>-->
+    </RelativeLayout>
 
 
-<!--    </LinearLayout>-->
-<!--    <RelativeLayout-->
-<!--        android:layout_width="300dp"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_gravity="start"-->
-<!--        android:background="@android:color/white">-->
 
-<!--        <include layout="@layout/main_nav_drawer"/>-->
-
-<!--    </RelativeLayout>-->
-
-<!--</androidx.drawerlayout.widget.DrawerLayout>-->
+</androidx.drawerlayout.widget.DrawerLayout>
