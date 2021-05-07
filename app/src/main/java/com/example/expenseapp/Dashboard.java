@@ -39,20 +39,26 @@ public class Dashboard extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
 
     }
+
+    //Navigation to menu
     public void ClickMenu(View v){
         //Oped drawer
         openDrawer(drawerLayout);
     }
 
+    //method for openning the navigation drawer
     public static void openDrawer(DrawerLayout drawerLayout) {
         //Open drawer layout
         drawerLayout.openDrawer(GravityCompat.START);
     }
 
+    //Navigation to edit profile layout
     public void ClickProfile(View v) {
         closeDrawer(drawerLayout);
     }
 
+
+    // Closing the navigation drawer
     public static void closeDrawer(DrawerLayout drawerLayout) {
 
         //Close drawer Layout
@@ -91,6 +97,7 @@ public class Dashboard extends AppCompatActivity {
         logout(this);
     }
 
+    //Method for setting the logout activity and determinning user's choice
     public static void logout(Activity activity) {
 
         //alert the dialog for user's choice
@@ -121,6 +128,7 @@ public class Dashboard extends AppCompatActivity {
         builder.show();
     }
 
+    //redirecting activities
     public static void redirectActivity(Activity activity, Class aClass) {
         Intent intent = new Intent(activity,aClass);
 
@@ -130,6 +138,7 @@ public class Dashboard extends AppCompatActivity {
         activity.startActivity(intent);
     }
 
+    //exiting from the navigation drawer
     protected void onPause() {
         super.onPause();
         //Close drawer

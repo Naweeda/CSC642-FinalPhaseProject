@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/background"
     tools:context=".HomeScreen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+                <include layout="@layout/main_toolbar" />
 
 
 <!--   Text display for home screen-->
@@ -14,12 +23,25 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="120dp"
             android:layout_marginTop="250dp"
-            android:textSize="50sp"
+            android:textSize="40sp"
             android:textStyle="bold"
             android:text="Welcome"
+            android:layout_gravity="center"
             android:textColor="@color/white"/>
 
+
 </LinearLayout>
+
+        <!-- Navigation drawer Display   -->
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@android:color/white">
+
+                <include layout="@layout/main_nav_drawer"/>
+
+        </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
 

@@ -38,6 +38,7 @@ public class ViewExpenses extends AppCompatActivity {
 
         //initialize the data for displaying the Android pie chart.
         List pieData = new ArrayList<>();
+
         // Adding the data inside the pieData
         pieData.add(new SliceValue(20, Color.BLUE).setLabel("Shopping 20%"));
         pieData.add(new SliceValue(20, Color.YELLOW).setLabel("Food 10%"));
@@ -57,20 +58,24 @@ public class ViewExpenses extends AppCompatActivity {
 
     }
 
+    //Navigation to menu
     public void ClickMenu(View v){
         //Oped drawer
         Dashboard.openDrawer(drawerLayout);
     }
 
+    //Method for openning the navigation drawer
     private static void openDrawer(DrawerLayout drawerLayout) {
         //Open drawer layout
         drawerLayout.openDrawer(GravityCompat.START);
     }
 
+    //Navigation to edit profile layout
     public void ClickProfile(View v) {
         Dashboard.closeDrawer(drawerLayout);
     }
 
+    //Closing the navigation drawer
     public static void closeDrawer(DrawerLayout drawerLayout) {
 
         //Close drawer Layout
@@ -82,29 +87,31 @@ public class ViewExpenses extends AppCompatActivity {
         }
     }
 
-
+    //Navigation to view expense screen
     public void ClickViewExpense(View v) {
         recreate();
     }
 
 
-
+    //Navigation to home screen
     public void ClickHome(View v){
         //Recreate activity
         Dashboard.redirectActivity(this,Dashboard.class);
     }
 
+    //Navigation to dashboard
     public void ClickDashboard(View v) {
         //Redirect activity to dashboard
         Dashboard.redirectActivity(this,Profile.class);
     }
 
-
+    //closing the app if the user chose to logout
     public void ClickLogout(View v) {
         //close app
         Dashboard.logout(this);
     }
 
+    //exit from the navigation drawer
     protected void onPause() {
         super.onPause();
         //Close drawer

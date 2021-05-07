@@ -12,6 +12,7 @@
     tools:context=".MainActivity">
 
 
+<!--Header display-->
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -23,6 +24,7 @@
         android:textSize="45dp"
         android:textStyle="bold" />
 
+    <!--User's name input display-->
     <EditText
         android:id="@+id/Name"
         android:layout_width="match_parent"
@@ -36,7 +38,7 @@
         android:drawableLeft="@drawable/ic_name"
         android:inputType="textPersonName" />
 
-
+    <!--User's last name input display-->
     <EditText
         android:id="@+id/LastName"
         android:layout_width="match_parent"
@@ -55,7 +57,7 @@
         android:inputType="textPersonName" />
 
 
-
+    <!--User's email input display-->
     <EditText
         android:id="@+id/Email"
         android:layout_width="match_parent"
@@ -69,7 +71,7 @@
         android:drawableLeft="@drawable/ic_emailicon"
         android:inputType="textEmailAddress" />
 
-
+    <!--User's password input display-->
     <EditText
         android:id="@+id/Password"
         android:layout_width="match_parent"
@@ -87,6 +89,7 @@
         android:drawableLeft="@drawable/ic_password"
         android:inputType="textPassword" />
 
+    <!--Button display for updating profile -->
     <Button
         android:id="@+id/submitButton"
         android:layout_width="match_parent"

@@ -32,6 +32,7 @@
             android:layout_marginTop="1200dp"
             android:src="@drawable/ic_editprofile" />
 
+<!--Text display for uploading a photo        -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,7 +43,7 @@
             android:textSize="15sp"
             android:textStyle="bold" />
 
-
+<!--User's name input display-->
         <EditText
             android:id="@+id/EditName"
             android:layout_width="match_parent"
@@ -52,24 +53,23 @@
             android:hint="Name"
             android:maxLines="1"
             android:ems="10"
-            android:inputType="textPersonName"
-           />
+            android:inputType="textPersonName" />
 
+<!--User's last name input display-->
         <EditText
             android:id="@+id/LastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
-
             android:paddingBottom="12dp"
             android:paddingTop="9dp"
             android:drawablePadding="13dp"
             android:hint="Last Name"
             android:maxLines="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            />
+            android:inputType="textPersonName" />
 
+<!--User's email input display-->
         <EditText
             android:id="@+id/editEmailAddress"
             android:layout_width="match_parent"
@@ -81,7 +81,7 @@
             android:hint="Email"
             android:inputType="textEmailAddress" />
 
-
+<!--User's password input display-->
         <EditText
             android:id="@+id/editTextTextPassword"
             android:layout_width="match_parent"
@@ -97,6 +97,7 @@
             android:ems="10"
             android:inputType="textPassword" />
 
+<!--Button display for updating profile -->
         <Button
             android:id="@+id/updateButton"
             android:layout_width="match_parent"
@@ -110,10 +111,9 @@
             android:textStyle="bold"
             android:backgroundTint="@color/cyan"/>
 
-
-
-
     </LinearLayout>
+
+<!-- Navigation drawer Display   -->
     <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="match_parent"
