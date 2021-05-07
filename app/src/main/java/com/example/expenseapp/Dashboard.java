@@ -101,15 +101,15 @@ public class Dashboard extends AppCompatActivity {
     public static void logout(Activity activity) {
 
         //alert the dialog for user's choice
-        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        AlertDialog.Builder alertMsg= new AlertDialog.Builder(activity);
         //set title
-        builder.setTitle("Logout");
+        alertMsg.setTitle("Logout");
 
-        //set message
-        builder.setMessage("Are you sure you want to logout ?");
+        //set the message
+        alertMsg.setMessage("Are you sure you want to logout ?");
 
-        //If the user say yes just exit
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        //If the user choose to say yes just exit
+        alertMsg.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 activity.finishAffinity();
@@ -117,15 +117,15 @@ public class Dashboard extends AppCompatActivity {
                 System.exit(0);
             }
         });
-        //If the user say no
-        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+        //If the user choose to say no
+        alertMsg.setNegativeButton("NO", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
         });
 
-        builder.show();
+        alertMsg.show();
     }
 
     //redirecting activities
