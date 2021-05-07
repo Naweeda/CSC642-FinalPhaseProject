@@ -51,7 +51,7 @@ public class HomeScreen extends AppCompatActivity {
 
     //Navigation to view expense screen
     public void ClickViewExpense(View v) {
-        Dashboard.redirectActivity(this,Dashboard.class);
+        Dashboard.redirectActivity(this,ViewExpenses.class);
     }
 
     //Navigation to home screen

@@ -96,7 +96,7 @@ public class ViewExpenses extends AppCompatActivity {
     //Navigation to home screen
     public void ClickHome(View v){
         //Recreate activity
-        Dashboard.redirectActivity(this,Dashboard.class);
+        Dashboard.redirectActivity(this,HomeScreen.class);
     }
 
     //Navigation to dashboard

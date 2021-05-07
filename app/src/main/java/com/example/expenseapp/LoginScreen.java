@@ -55,7 +55,7 @@ public class LoginScreen extends AppCompatActivity {
     //Navigation to home screen
     public void ClickHome(View v){
         //Recreate activity
-        recreate();
+        Dashboard.redirectActivity(this,HomeScreen.class);
 
     }
 

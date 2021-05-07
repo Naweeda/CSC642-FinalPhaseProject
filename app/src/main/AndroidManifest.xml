@@ -19,8 +19,7 @@
 
         <activity
             android:name=".Profile"
-            android:label="@string/title_activity_profile"
-            android:theme="@style/Theme.ExpenseApp.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <activity
             android:name=".Dashboard"

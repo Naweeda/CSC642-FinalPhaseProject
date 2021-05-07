@@ -19,9 +19,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="32dp"
-        android:text="Sign In"
+        android:text="Welcome"
         android:textColor="@color/white"
-        android:textSize="50dp"
+        android:textSize="40dp"
         android:textStyle="bold" />
 
 <!--Email Input Display    -->
