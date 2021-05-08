@@ -20,6 +20,7 @@ public class Dashboard extends AppCompatActivity {
     //Initialize variable
     DrawerLayout drawerLayout;
     Activity activity;
+    Button ExpenseInsertButton;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,8 @@ public class Dashboard extends AppCompatActivity {
 
         //setting xml layout to the dasboard activity which will render of the activity.
         setContentView(R.layout.activity_dashboard);
+        //Navigation to Expense View Page
+        ExpenseInsertButton = findViewById(R.id.ExpenseInsertButton);
 
         //setting up the date
         TextView view=findViewById(R.id.date);
@@ -37,6 +40,18 @@ public class Dashboard extends AppCompatActivity {
 
         //Assign variable
         drawerLayout = findViewById(R.id.drawer_layout);
+
+        //Setting up the naviagtion to view expense
+        ExpenseInsertButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            //Direct to the view expense screen
+            public void onClick(View v) {
+                startActivity(new Intent(Dashboard.this, ViewExpenses.class));
+            }
+        });
+
+
 
     }
 
